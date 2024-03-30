@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <fance>
+    <block name="fanceBlock" x="0" y="0" />
+    <block name="fanceBlock" x="0" y="4" />
+    <block name="fanceBlock" x="0" y="8" />
+    <block name="fanceBlock" x="0" y="12" />
+    <block name="fanceBlock" x="0" y="16" />
+    <block name="fanceBlock" x="0" y="20" />
+    <block name="fanceBlock" x="0" y="24" />
+    <block name="fanceBlock" x="0" y="28" />
+  </fance>
+
+  <fullBodiedBlock>
+    <block name="fullBodiedBlock" x="0" y="0"/>
+  </fullBodiedBlock>
+
+  <base>
+    <block name="fullBodiedBlock" x="0" y="2" />
+    <block name="fullBodiedBlock" x="0" y="6" />
+    <block name="fullBodiedBlock" x="4" y="0" />
+    <block name="fullBodiedBlock" x="4" y="4" />
+    <block name="fullBodiedBlock" x="4" y="8" />
+    <block name="fullBodiedBlock" x="4" y="12" />
+    <block name="fullBodiedBlock" x="8" y="2" />
+    <block name="fullBodiedBlock" x="8" y="6" />
+    <block name="fullBodiedBlock" x="8" y="10" />
+    <block name="fullBodiedBlock" x="12" y="0" />
+    <block name="fullBodiedBlock" x="12" y="4" />
+    <block name="fullBodiedBlock" x="12" y="8" />
+    <block name="fullBodiedBlock" x="12" y="12" />
+    <block name="fullBodiedBlock" x="16" y="2" />
+    <block name="fullBodiedBlock" x="16" y="6" />
+  </base>
+
+  <followBlock>
+    <block name="followBlock" x="0" y="0" />
+  </followBlock>
+
+  <factory>
+    <block name="fullBodiedBlock" x="0" y="0" />
+    <block name="fullBodiedBlock" x="4" y="0" />
+    <block name="fullBodiedBlock" x="8" y="0" />
+    <block name="fullBodiedBlock" x="0" y="4" />
+    <block name="fullBodiedBlock" x="8" y="4" />
+  </factory>
+
+  <horizontalDoubleBlock>
+    <block name="fullBodiedBlock" x="0" y="0" />
+    <block name="fullBodiedBlock" x="4" y="0" />
+  </horizontalDoubleBlock>
+
+  <horizontalDoubleFollowBlock>
+    <block name="followBlock" x="0" y="0" />
+    <block name="followBlock" x="4" y="0" />
+  </horizontalDoubleFollowBlock>
+</objects>
