@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<map>
+  <object name="fance" x="0" y="0" />
+
+  <object name="fullBodiedBlock" x="8" y="26"/>
+
+  <object name="base" x="12" y="2" />
+
+  <object name="followBlock" x="40" y="4" />
+
+  <object name="factory" x="50" y="6" />
+
+  <object name="factory" x="78" y="0" />
+  
+  <object name="factory" x="96" y="14" />
+
+  <object name="horizontalDoubleBlock" x="102" y="2" />
+
+  <object name="fullBodiedBlock" x="116" y="0"/>
+
+  <object name="horizontalDoubleFollowBlock" x="116" y="28" />
+
+  <object name="factory" x="132" y="0" />
+
+  <object name="horizontalQuadrupleBlock" x="166" y="28" />
+
+  <object name="factory" x="168" y="0" />
+
+  <object name="horizontalQuadrupleBlock" x="188" y="6" />
+
+  <object name="horizontalQuadrupleBlock" x="192" y="24" />
+
+  <object name="verticalQuadrupleBlock" x="218" y="16" />
+
+  <object name="factory" x="222" y="0" />
+
+  <object name="followBlock" x="234" y="12"/>
+
+  <object name="fullBodiedBlock" x="230" y="22"/>
+
+  <object name="verticalDoubleBlock" x="242" y="20" />
+
+  <object name="horizontalQuadrupleBlock" x="244" y="6" />
+
+  <object name="factory" x="252" y="16" />
+</map>

@@ -86,10 +86,5 @@
       <Name>NetherEarthGame</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="xml\blocks.xml" />
-    <Content Include="xml\game-map.xml" />
-    <Content Include="xml\game-objects.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
