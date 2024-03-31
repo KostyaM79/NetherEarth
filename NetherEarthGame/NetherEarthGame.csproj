@@ -61,6 +61,8 @@
     <Compile Include="GameObjects\HorizontalQuadrupleBlock.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RobotPrograms\InitialProgram.cs" />
+    <Compile Include="RobotPrograms\IRobotProgram.cs" />
     <Compile Include="Robot\Antigravs.cs" />
     <Compile Include="Robot\Bipods.cs" />
     <Compile Include="Robot\Chassis.cs" />

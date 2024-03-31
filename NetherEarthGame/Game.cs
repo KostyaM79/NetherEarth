@@ -24,7 +24,11 @@ namespace NetherEarthGame
 
         public void GameUpdate()
         {
-
+            foreach (Robot r in robots)
+            {
+                IRobotProgram program = r.Program;
+                program.Move(r);
+            }
         }
 
         public void LoadObjects()
@@ -35,7 +39,7 @@ namespace NetherEarthGame
 
         public void CreateRobot()
         {
-            robots.Add(new Robot(20, 16));
+            robots.Add(new Robot(20, 16) { Program = new InitialProgram() });
         }
     }
 }

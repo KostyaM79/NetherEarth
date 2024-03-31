@@ -23,6 +23,8 @@ namespace NetherEarthGame
             CreatePoints();
         }
 
+        public IRobotProgram Program { get; set; }
+
         private void CreatePoints()
         {
             for (int i = 0; i < 4; i++)

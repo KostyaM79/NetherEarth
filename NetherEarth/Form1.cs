@@ -59,5 +59,10 @@ namespace NetherEarth
         {
             gameRunner.CreateRobot();
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            gameRunner.Stop();
+        }
     }
 }

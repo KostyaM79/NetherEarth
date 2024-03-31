@@ -33,11 +33,11 @@ namespace NetherEarth
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.createButton = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
             this.leftButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rightButton = new System.Windows.Forms.Button();
-            this.createButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -104,6 +104,16 @@ namespace NetherEarth
             this.panel1.Size = new System.Drawing.Size(655, 96);
             this.panel1.TabIndex = 2;
             // 
+            // createButton
+            // 
+            this.createButton.Location = new System.Drawing.Point(86, 4);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(97, 23);
+            this.createButton.TabIndex = 2;
+            this.createButton.Text = "Создать робота";
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            // 
             // startButton
             // 
             this.startButton.Location = new System.Drawing.Point(4, 4);
@@ -144,16 +154,6 @@ namespace NetherEarth
             this.rightButton.UseVisualStyleBackColor = true;
             this.rightButton.Click += new System.EventHandler(this.rightButton_Click);
             // 
-            // createButton
-            // 
-            this.createButton.Location = new System.Drawing.Point(86, 4);
-            this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(97, 23);
-            this.createButton.TabIndex = 2;
-            this.createButton.Text = "Создать робота";
-            this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +164,7 @@ namespace NetherEarth
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

@@ -27,6 +27,11 @@ namespace NetherEarth
             timer.Start();
         }
 
+        public void Stop()
+        {
+            timer.Stop();
+        }
+
         public Game Game => game;
 
         public void CreateRobot() => game.CreateRobot();

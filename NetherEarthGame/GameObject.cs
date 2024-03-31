@@ -23,5 +23,16 @@ namespace NetherEarthGame
         public int X => position.X;
 
         public int Y => position.Y;
+
+        public bool Contains(int x, int y)
+        {
+            foreach (Point p in points)
+            {
+                if (p.X + position.X == x && p.Y + position.Y == y)
+                    return true;
+            }
+
+            return false;
+        }
     }
 }
