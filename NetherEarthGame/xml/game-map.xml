@@ -128,9 +128,7 @@
 
   <object name="verticalQuadrupleBlock" x="677" y="16" />
 
-  <object name="followBlock" x="685" y="8"/>
-  <object name="fullBodiedBlock" x="689" y="8"/>
-  <object name="followBlock" x="693" y="8"/>
+  <object name="hTripleFullCenterBlock" x="685" y="8" />
 
   <object name="base" x="703" y="0" />
 
