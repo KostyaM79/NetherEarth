@@ -26,99 +26,32 @@ namespace NetherEarthGame
 
                 switch (objectXml.Attributes["name"].Value)
                 {
-                    case "fance": game.AddGameObject(CreateFance(gameObjectsXml.DocumentElement["fance"], blocksXml, position)); break;
-                    case "fullBodiedBlock": game.AddGameObject(CreateBlock(gameObjectsXml.DocumentElement["fullBodiedBlock"], blocksXml, position)); break;
-                    case "base": game.AddGameObject(CreateBase(gameObjectsXml.DocumentElement["base"], blocksXml, position)); break;
-                    case "followBlock": game.AddGameObject(CreateFollowBlock(gameObjectsXml.DocumentElement["followBlock"], blocksXml, position)); break;
-                    case "factory": game.AddGameObject(CreateFactory(gameObjectsXml.DocumentElement["factory"], blocksXml, position)); break;
-                    case "horizontalDoubleBlock": game.AddGameObject(CreateHorizontalDoubleBlock(gameObjectsXml.DocumentElement["horizontalDoubleBlock"], blocksXml, position)); break;
-                    case "horizontalDoubleFollowBlock": game.AddGameObject(CreateHorizontalDoubleFollowBlock(gameObjectsXml.DocumentElement["horizontalDoubleFollowBlock"], blocksXml, position)); break;
-                    case "horizontalQuadrupleBlock": game.AddGameObject(CreateHorizontalQuadrupleBlock(gameObjectsXml.DocumentElement["horizontalQuadrupleBlock"], blocksXml, position)); break;
-                    case "verticalQuadrupleBlock": game.AddGameObject(CreateVerticalQuadrupleBlock(gameObjectsXml.DocumentElement["verticalQuadrupleBlock"], blocksXml, position)); break;
-                    case "verticalDoubleBlock": game.AddGameObject(CreateVerticalDoubleBlock(gameObjectsXml.DocumentElement["verticalDoubleBlock"], blocksXml, position)); break;
+                    case "fance": game.AddGameObject(CreateObject<Fance>(gameObjectsXml.DocumentElement["fance"], blocksXml, position)); break;
+                    case "fullBodiedBlock": game.AddGameObject(CreateObject<Block>(gameObjectsXml.DocumentElement["fullBodiedBlock"], blocksXml, position)); break;
+                    case "base": game.AddGameObject(CreateObject<Base>(gameObjectsXml.DocumentElement["base"], blocksXml, position)); break;
+                    case "followBlock": game.AddGameObject(CreateObject<FollowBlock>(gameObjectsXml.DocumentElement["followBlock"], blocksXml, position)); break;
+                    case "factory": game.AddGameObject(CreateObject<Factory>(gameObjectsXml.DocumentElement["factory"], blocksXml, position)); break;
+                    case "horizontalDoubleBlock": game.AddGameObject(CreateObject<HorizontalDoubleBlock>(gameObjectsXml.DocumentElement["horizontalDoubleBlock"], blocksXml, position)); break;
+                    case "horizontalDoubleFollowBlock": game.AddGameObject(CreateObject<HorizontalDoubleFollowBlock>(gameObjectsXml.DocumentElement["horizontalDoubleFollowBlock"], blocksXml, position)); break;
+                    case "horizontalQuadrupleBlock": game.AddGameObject(CreateObject<HorizontalQuadrupleBlock>(gameObjectsXml.DocumentElement["horizontalQuadrupleBlock"], blocksXml, position)); break;
+                    case "verticalQuadrupleBlock": game.AddGameObject(CreateObject<VerticalQuadrupleBlock>(gameObjectsXml.DocumentElement["verticalQuadrupleBlock"], blocksXml, position)); break;
+                    case "verticalDoubleBlock": game.AddGameObject(CreateObject<VerticalDoubleBlock>(gameObjectsXml.DocumentElement["verticalDoubleBlock"], blocksXml, position)); break;
+                    case "horizontalQuadrupleFollowBlock": game.AddGameObject(CreateObject<HorizontalQuadrupleFollowBlock>(gameObjectsXml.DocumentElement["horizontalQuadrupleFollowBlock"], blocksXml, position)); break;
+                    case "diagonalTripleBlock": game.AddGameObject(CreateObject<DiagonalTripleBlock>(gameObjectsXml.DocumentElement["diagonalTripleBlock"], blocksXml, position)); break;
+                    case "verticalDoubleFollowBlock": game.AddGameObject(CreateObject<VerticalDoubleFollowBlock>(gameObjectsXml.DocumentElement["verticalDoubleFollowBlock"], blocksXml, position)); break;
+                    case "hTripleFullCenterBlock": game.AddGameObject(CreateObject<HTripleFullCenterBlock>(gameObjectsXml.DocumentElement["hTripleFullCenterBlock"], blocksXml, position)); break;
                 }
 
             }
         }
 
-        private Fance CreateFance(XmlElement fanceXml, XmlDocument blocksXml, Point position)
-        {
-            Fance fance = new Fance();
-            fance.SetPosition(position.X, position.Y);
-            CreatePoints(fanceXml, blocksXml, fance);
-            return fance;
-        }
 
-        private Block CreateBlock(XmlElement blockXml, XmlDocument blocksXml, Point position)
+        private T CreateObject<T>(XmlElement element, XmlDocument blocksXml, Point position) where T:GameObject, new()
         {
-            Block block = new Block();
+            T block = new T();
             block.SetPosition(position.X, position.Y);
-            CreatePoints(blockXml, blocksXml, block);
+            CreatePoints(element, blocksXml, block);
             return block;
-        }
-
-        private Base CreateBase(XmlElement baseXml, XmlDocument blocksXml, Point position)
-        {
-            Base b = new Base();
-            b.SetPosition(position.X, position.Y);
-            CreatePoints(baseXml, blocksXml, b);
-            return b;
-        }
-
-        private FollowBlock CreateFollowBlock(XmlElement followBlockXml, XmlDocument blocksXml, Point position)
-        {
-            FollowBlock followBlock = new FollowBlock();
-            followBlock.SetPosition(position.X, position.Y);
-            CreatePoints(followBlockXml, blocksXml, followBlock);
-            return followBlock;
-        }
-
-        private Factory CreateFactory(XmlElement factoryXml, XmlDocument blocksXml, Point position)
-        {
-            Factory factory = new Factory();
-            factory.SetPosition(position.X, position.Y);
-            CreatePoints(factoryXml, blocksXml, factory);
-            return factory;
-        }
-
-        private HorizontalDoubleBlock CreateHorizontalDoubleBlock(XmlElement element, XmlDocument blocksXml, Point position)
-        {
-            HorizontalDoubleBlock horizontalDoubleBlock = new HorizontalDoubleBlock();
-            horizontalDoubleBlock.SetPosition(position.X, position.Y);
-            CreatePoints(element, blocksXml, horizontalDoubleBlock);
-            return horizontalDoubleBlock;
-        }
-
-        private HorizontalDoubleFollowBlock CreateHorizontalDoubleFollowBlock(XmlElement element, XmlDocument blocksXml, Point position)
-        {
-            HorizontalDoubleFollowBlock horizontalDoubleFollowBlock = new HorizontalDoubleFollowBlock();
-            horizontalDoubleFollowBlock.SetPosition(position.X, position.Y);
-            CreatePoints(element, blocksXml, horizontalDoubleFollowBlock);
-            return horizontalDoubleFollowBlock;
-        }
-
-        private HorizontalQuadrupleBlock CreateHorizontalQuadrupleBlock(XmlElement element, XmlDocument blocksXml, Point position)
-        {
-            HorizontalQuadrupleBlock horizontalQuadrupleBlock = new HorizontalQuadrupleBlock();
-            horizontalQuadrupleBlock.SetPosition(position.X, position.Y);
-            CreatePoints(element, blocksXml, horizontalQuadrupleBlock);
-            return horizontalQuadrupleBlock;
-        }
-
-        private VerticalQuadrupleBlock CreateVerticalQuadrupleBlock(XmlElement element, XmlDocument blocksXml, Point position)
-        {
-            VerticalQuadrupleBlock verticalQuadrupleBlock = new VerticalQuadrupleBlock();
-            verticalQuadrupleBlock.SetPosition(position.X, position.Y);
-            CreatePoints(element, blocksXml, verticalQuadrupleBlock);
-            return verticalQuadrupleBlock;
-        }
-
-        private VerticalDoubleBlock CreateVerticalDoubleBlock(XmlElement element, XmlDocument blocksXml, Point position)
-        {
-            VerticalDoubleBlock verticalDoubleBlock = new VerticalDoubleBlock();
-            verticalDoubleBlock.SetPosition(position.X, position.Y);
-            CreatePoints(element, blocksXml, verticalDoubleBlock);
-            return verticalDoubleBlock;
         }
 
         private void CreatePoints(XmlElement element, XmlDocument blocksXml, GameObject gameObject)

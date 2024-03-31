@@ -43,14 +43,18 @@
   <ItemGroup>
     <Compile Include="GameObjects\Base.cs" />
     <Compile Include="GameObjects\Block.cs" />
+    <Compile Include="GameObjects\DiagonalTripleBlock.cs" />
     <Compile Include="GameObjects\Factory.cs" />
     <Compile Include="GameObjects\Fance.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="GameObjectFactory.cs" />
     <Compile Include="GameObjects\FollowBlock.cs" />
+    <Compile Include="GameObjects\HTripleFullCenterBlock.cs" />
+    <Compile Include="GameObjects\VerticalDoubleFollowBlock.cs" />
     <Compile Include="GameObjects\HorizontalDoubleFollowBlock.cs" />
     <Compile Include="GameObjects\HorizontalDoubleBlock.cs" />
+    <Compile Include="GameObjects\HorizontalQuadrupleFollowBlock.cs" />
     <Compile Include="GameObjects\VerticalDoubleBlock.cs" />
     <Compile Include="GameObjects\VerticalQuadrupleBlock.cs" />
     <Compile Include="GameObjects\HorizontalQuadrupleBlock.cs" />

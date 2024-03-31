@@ -73,4 +73,28 @@
     <block name="fullBodiedBlock" x="0" y="0" />
     <block name="fullBodiedBlock" x="0" y="4" />
   </verticalDoubleBlock>
+
+  <horizontalQuadrupleFollowBlock>
+    <block name="followBlock" x="0" y="0" />
+    <block name="followBlock" x="4" y="0" />
+    <block name="followBlock" x="8" y="0" />
+    <block name="followBlock" x="12" y="0" />
+  </horizontalQuadrupleFollowBlock>
+
+  <diagonalTripleBlock>
+    <block name="fullBodiedBlock" x="0" y="0" />
+    <block name="fullBodiedBlock" x="4" y="4" />
+    <block name="fullBodiedBlock" x="8" y="8" />
+  </diagonalTripleBlock>
+
+  <verticalDoubleFollowBlock>
+    <block name="followBlock" x="0" y="0" />
+    <block name="followBlock" x="0" y="4" />
+  </verticalDoubleFollowBlock>
+
+  <hTripleFullCenterBlock>
+    <block name="followBlock" x="0" y="0" />
+    <block name="fullBodiedBlock" x="4" y="0" />
+    <block name="followBlock" x="8" y="0" />
+  </hTripleFullCenterBlock>
 </objects>

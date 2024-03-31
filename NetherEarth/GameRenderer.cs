@@ -11,7 +11,7 @@ namespace NetherEarth
     public class GameRenderer
     {
         private int squareSide = 8;
-        private int offset = 100;
+        private int offset = 800;
 
         public void RenderMap(Game game, Graphics graphics)
         {
@@ -24,6 +24,8 @@ namespace NetherEarth
                     graphics.DrawRectangle(pen, (p.X + o.X - offset) * squareSide, (p.Y + o.Y) * squareSide, squareSide, squareSide);
                 }
             }
+
+            graphics.DrawLine(pen, 0, squareSide * 32 + 1, 1920, squareSide * 32 + 1);
         }
     }
 }

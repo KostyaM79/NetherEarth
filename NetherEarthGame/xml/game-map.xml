@@ -43,4 +43,134 @@
   <object name="horizontalQuadrupleBlock" x="244" y="6" />
 
   <object name="factory" x="252" y="16" />
+
+  <object name="factory" x="292" y="4" />
+
+  <object name="factory" x="332" y="0" />
+
+  <object name="horizontalQuadrupleFollowBlock" x="368" y="4" />
+  
+  <object name="horizontalQuadrupleFollowBlock" x="384" y="4" />
+
+  <object name="horizontalQuadrupleFollowBlock" x="400" y="4" />
+
+  <object name="factory" x="416" y="0" />
+
+  <object name="horizontalQuadrupleBlock" x="368" y="14"/>
+
+  <object name="horizontalQuadrupleBlock" x="384" y="14"/>
+
+  <object name="horizontalDoubleBlock" x="400" y="14" />
+
+  <object name="horizontalQuadrupleFollowBlock" x="368" y="24" />
+
+  <object name="horizontalQuadrupleFollowBlock" x="384" y="24" />
+
+  <object name="horizontalQuadrupleFollowBlock" x="400" y="24" />
+
+  <object name="horizontalQuadrupleFollowBlock" x="416" y="24" />
+  
+  <object name="horizontalQuadrupleFollowBlock" x="432" y="24" />
+  
+  <object name="followBlock" x="444" y="20"/>
+
+  <object name="factory" x="436" y="12" />
+
+  <object name="verticalQuadrupleBlock" x="452" y="12" />
+
+  <object name="fullBodiedBlock" x="452" y="28"/>
+
+  <object name="factory" x="464" y="0" />
+
+  <object name="base" x="500" y="0" />
+
+  <object name="factory" x="533" y="0" />
+
+  <object name="factory" x="545" y="20" />
+
+  <object name="fullBodiedBlock" x="551" y="4"/>
+
+  <object name="factory" x="561" y="0" />
+
+  <object name="followBlock" x="571" y="16"/>
+
+  <object name="factory" x="591" y="8" />
+
+  <object name="fullBodiedBlock" x="583" y="24"/>
+
+  <object name="factory" x="613" y="0" />
+
+  <object name="diagonalTripleBlock" x="613" y="15" />
+
+  <object name="fullBodiedBlock" x="631" y="19"/>
+
+  <object name="horizontalQuadrupleBlock" x="645" y="8"/>
+
+  <object name="horizontalQuadrupleBlock" x="645" y="16"/>
+
+  <object name="followBlock" x="649" y="4"/>
+
+  <object name="followBlock" x="649" y="24"/>
+
+  <object name="horizontalQuadrupleBlock" x="661" y="8"/>
+
+  <object name="horizontalQuadrupleBlock" x="661" y="16"/>
+
+  <object name="followBlock" x="661" y="8"/>
+
+  <object name="followBlock" x="665" y="20"/>
+
+  <object name="verticalDoubleFollowBlock" x="657" y="24" />
+
+  <object name="horizontalDoubleFollowBlock" x="661" y="28" />
+
+  <object name="verticalDoubleBlock" x="673" y="0" />
+
+  <object name="verticalQuadrupleBlock" x="677" y="16" />
+
+  <object name="followBlock" x="685" y="8"/>
+  <object name="fullBodiedBlock" x="689" y="8"/>
+  <object name="followBlock" x="693" y="8"/>
+
+  <object name="base" x="703" y="0" />
+
+  <object name="fullBodiedBlock" x="731" y="6"/>
+
+  <object name="factory" x="741" y="0" />
+
+  <object name="fullBodiedBlock" x="761" y="0"/>
+
+  <object name="factory" x="771" y="8" />
+
+  <object name="followBlock" x="775" y="28"/>
+
+  <object name="fullBodiedBlock" x="791" y="0"/>
+
+  <object name="factory" x="801" y="0" />
+
+  <object name="factory" x="841" y="4" />
+
+  <object name="factory" x="861" y="0" />
+
+  <object name="factory" x="881" y="14" />
+
+  <object name="factory" x="901" y="0" />
+
+  <object name="fullBodiedBlock" x="901" y="18"/>
+
+  <object name="followBlock" x="907" y="24"/>
+
+<object name="hTripleFullCenterBlock" x="921" y="8" />
+<object name="hTripleFullCenterBlock" x="933" y="8" />
+<object name="hTripleFullCenterBlock" x="925" y="4" />
+<object name="hTripleFullCenterBlock" x="929" y="0" />
+
+<object name="hTripleFullCenterBlock" x="921" y="16" />
+<object name="hTripleFullCenterBlock" x="925" y="20" />
+<object name="hTripleFullCenterBlock" x="929" y="24" />
+<object name="hTripleFullCenterBlock" x="933" y="28" />
+
+  <object name="base" x="953" y="0" />
+
+  <object name="fance" x="979" y="0" />
 </map>
