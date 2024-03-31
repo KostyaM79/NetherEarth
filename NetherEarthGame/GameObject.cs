@@ -11,6 +11,7 @@ namespace NetherEarthGame
         private List<Point> points = new List<Point>();
         private Point position;
 
+
         public void AddPoint(Point point) => points.Add(point);
 
         public void AddPoint(int x, int y) => points.Add(new Point(x, y));

@@ -9,7 +9,7 @@ namespace NetherEarthGame
 {
     public class GameObjectFactory
     {
-        public void CreateObject(Game game)
+        public void CreateObject(List<GameObject>gameObjects)
         {
             XmlDocument blocksXml = new XmlDocument();
             XmlDocument gameObjectsXml = new XmlDocument();
@@ -26,20 +26,20 @@ namespace NetherEarthGame
 
                 switch (objectXml.Attributes["name"].Value)
                 {
-                    case "fance": game.AddGameObject(CreateObject<Fance>(gameObjectsXml.DocumentElement["fance"], blocksXml, position)); break;
-                    case "fullBodiedBlock": game.AddGameObject(CreateObject<Block>(gameObjectsXml.DocumentElement["fullBodiedBlock"], blocksXml, position)); break;
-                    case "base": game.AddGameObject(CreateObject<Base>(gameObjectsXml.DocumentElement["base"], blocksXml, position)); break;
-                    case "followBlock": game.AddGameObject(CreateObject<FollowBlock>(gameObjectsXml.DocumentElement["followBlock"], blocksXml, position)); break;
-                    case "factory": game.AddGameObject(CreateObject<Factory>(gameObjectsXml.DocumentElement["factory"], blocksXml, position)); break;
-                    case "horizontalDoubleBlock": game.AddGameObject(CreateObject<HorizontalDoubleBlock>(gameObjectsXml.DocumentElement["horizontalDoubleBlock"], blocksXml, position)); break;
-                    case "horizontalDoubleFollowBlock": game.AddGameObject(CreateObject<HorizontalDoubleFollowBlock>(gameObjectsXml.DocumentElement["horizontalDoubleFollowBlock"], blocksXml, position)); break;
-                    case "horizontalQuadrupleBlock": game.AddGameObject(CreateObject<HorizontalQuadrupleBlock>(gameObjectsXml.DocumentElement["horizontalQuadrupleBlock"], blocksXml, position)); break;
-                    case "verticalQuadrupleBlock": game.AddGameObject(CreateObject<VerticalQuadrupleBlock>(gameObjectsXml.DocumentElement["verticalQuadrupleBlock"], blocksXml, position)); break;
-                    case "verticalDoubleBlock": game.AddGameObject(CreateObject<VerticalDoubleBlock>(gameObjectsXml.DocumentElement["verticalDoubleBlock"], blocksXml, position)); break;
-                    case "horizontalQuadrupleFollowBlock": game.AddGameObject(CreateObject<HorizontalQuadrupleFollowBlock>(gameObjectsXml.DocumentElement["horizontalQuadrupleFollowBlock"], blocksXml, position)); break;
-                    case "diagonalTripleBlock": game.AddGameObject(CreateObject<DiagonalTripleBlock>(gameObjectsXml.DocumentElement["diagonalTripleBlock"], blocksXml, position)); break;
-                    case "verticalDoubleFollowBlock": game.AddGameObject(CreateObject<VerticalDoubleFollowBlock>(gameObjectsXml.DocumentElement["verticalDoubleFollowBlock"], blocksXml, position)); break;
-                    case "hTripleFullCenterBlock": game.AddGameObject(CreateObject<HTripleFullCenterBlock>(gameObjectsXml.DocumentElement["hTripleFullCenterBlock"], blocksXml, position)); break;
+                    case "fance": gameObjects.Add(CreateObject<Fance>(gameObjectsXml.DocumentElement["fance"], blocksXml, position)); break;
+                    case "fullBodiedBlock": gameObjects.Add(CreateObject<Block>(gameObjectsXml.DocumentElement["fullBodiedBlock"], blocksXml, position)); break;
+                    case "base": gameObjects.Add(CreateObject<Base>(gameObjectsXml.DocumentElement["base"], blocksXml, position)); break;
+                    case "followBlock": gameObjects.Add(CreateObject<FollowBlock>(gameObjectsXml.DocumentElement["followBlock"], blocksXml, position)); break;
+                    case "factory": gameObjects.Add(CreateObject<Factory>(gameObjectsXml.DocumentElement["factory"], blocksXml, position)); break;
+                    case "horizontalDoubleBlock": gameObjects.Add(CreateObject<HorizontalDoubleBlock>(gameObjectsXml.DocumentElement["horizontalDoubleBlock"], blocksXml, position)); break;
+                    case "horizontalDoubleFollowBlock": gameObjects.Add(CreateObject<HorizontalDoubleFollowBlock>(gameObjectsXml.DocumentElement["horizontalDoubleFollowBlock"], blocksXml, position)); break;
+                    case "horizontalQuadrupleBlock": gameObjects.Add(CreateObject<HorizontalQuadrupleBlock>(gameObjectsXml.DocumentElement["horizontalQuadrupleBlock"], blocksXml, position)); break;
+                    case "verticalQuadrupleBlock": gameObjects.Add(CreateObject<VerticalQuadrupleBlock>(gameObjectsXml.DocumentElement["verticalQuadrupleBlock"], blocksXml, position)); break;
+                    case "verticalDoubleBlock": gameObjects.Add(CreateObject<VerticalDoubleBlock>(gameObjectsXml.DocumentElement["verticalDoubleBlock"], blocksXml, position)); break;
+                    case "horizontalQuadrupleFollowBlock": gameObjects.Add(CreateObject<HorizontalQuadrupleFollowBlock>(gameObjectsXml.DocumentElement["horizontalQuadrupleFollowBlock"], blocksXml, position)); break;
+                    case "diagonalTripleBlock": gameObjects.Add(CreateObject<DiagonalTripleBlock>(gameObjectsXml.DocumentElement["diagonalTripleBlock"], blocksXml, position)); break;
+                    case "verticalDoubleFollowBlock": gameObjects.Add(CreateObject<VerticalDoubleFollowBlock>(gameObjectsXml.DocumentElement["verticalDoubleFollowBlock"], blocksXml, position)); break;
+                    case "hTripleFullCenterBlock": gameObjects.Add(CreateObject<HTripleFullCenterBlock>(gameObjectsXml.DocumentElement["hTripleFullCenterBlock"], blocksXml, position)); break;
                 }
 
             }

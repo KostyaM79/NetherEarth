@@ -15,27 +15,49 @@ namespace NetherEarth
     {
         private Graphics g;
         private GameRenderer gameRenderer = new GameRenderer();
-        private Game game = new Game();
-        private int width = Screen.PrimaryScreen.Bounds.Width;
-        private int height = Screen.PrimaryScreen.Bounds.Height;
-        Bitmap bitmap;
+        private GameRunner gameRunner;
+        private delegate void RefreshPictire();
+        RefreshPictire refreshPictire;
 
         public Form1()
         {
-            bitmap = new Bitmap(width, height);
-            g = Graphics.FromImage(bitmap);
-            //g = CreateGraphics();
-
             InitializeComponent();
-
-            GameObjectFactory objectFactory = new GameObjectFactory();
-            objectFactory.CreateObject(game);
+            gameRunner = new GameRunner(new Game());
+            gameRunner.GameUpdated += OnGameUpdated;
+            refreshPictire = new RefreshPictire(pictureBox1.Refresh);
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            BackgroundImage = bitmap;
+            splitContainer1.SplitterDistance = gameRunner.Game.Height + 2;
+            pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            g = Graphics.FromImage(pictureBox1.Image);
+        }
+
+        private void OnGameUpdated(Game game)
+        {
             gameRenderer.RenderMap(game, g);
+            Invoke(refreshPictire);
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            gameRunner.Start();
+        }
+
+        private void leftButton_Click(object sender, EventArgs e)
+        {
+            gameRenderer.OffsetLeft();
+        }
+
+        private void rightButton_Click(object sender, EventArgs e)
+        {
+            gameRenderer.OffsetRight();
+        }
+
+        private void createButton_Click(object sender, EventArgs e)
+        {
+            gameRunner.CreateRobot();
         }
     }
 }

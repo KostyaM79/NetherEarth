@@ -14,5 +14,24 @@ namespace NetherEarthGame
         private Phazor phazor;
         private Chassis chassis;
         private Electronics electronics;
+
+        public Robot() { }
+
+        public Robot(int x, int y)
+        {
+            SetPosition(x, y);
+            CreatePoints();
+        }
+
+        private void CreatePoints()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Points.Add(new Point(j, i));
+                }
+            }
+        }
     }
 }
