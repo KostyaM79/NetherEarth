@@ -7,9 +7,9 @@ using System.Xml;
 
 namespace NetherEarthGame
 {
-    public class GameObjectFactory
+    internal class GameObjectFactory
     {
-        public void CreateObject(List<GameObject>gameObjects)
+        internal void CreateObject(List<GameObject>gameObjects)
         {
             XmlDocument blocksXml = new XmlDocument();
             XmlDocument gameObjectsXml = new XmlDocument();

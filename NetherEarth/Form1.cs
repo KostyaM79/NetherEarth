@@ -13,23 +13,20 @@ namespace NetherEarth
 {
     public partial class Form1 : Form
     {
+        private Timer timer = new Timer();
         private Graphics g;
         private GameRenderer gameRenderer = new GameRenderer();
-        private GameRunner gameRunner;
-        private delegate void RefreshPictire();
-        RefreshPictire refreshPictire;
+        private Game game = new Game();
 
         public Form1()
         {
             InitializeComponent();
-            gameRunner = new GameRunner(new Game());
-            gameRunner.GameUpdated += OnGameUpdated;
-            refreshPictire = new RefreshPictire(pictureBox1.Refresh);
+            game.GameUpdated += OnGameUpdated;
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            splitContainer1.SplitterDistance = gameRunner.Game.Height + 2;
+            splitContainer1.SplitterDistance = game.Height + 2;
             pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(pictureBox1.Image);
         }
@@ -37,12 +34,20 @@ namespace NetherEarth
         private void OnGameUpdated(Game game)
         {
             gameRenderer.RenderMap(game, g);
-            Invoke(refreshPictire);
+            pictureBox1.Refresh();
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            gameRunner.Start();
+            timer.Interval = 250;
+            timer.Tick += Timer_Tick;
+            game.Start();
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            game.GameUpdate();
         }
 
         private void leftButton_Click(object sender, EventArgs e)
@@ -57,12 +62,12 @@ namespace NetherEarth
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            gameRunner.CreateRobot();
+            game.CreateRobot();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            gameRunner.Stop();
+            timer.Stop();
         }
     }
 }

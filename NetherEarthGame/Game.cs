@@ -8,6 +8,8 @@ namespace NetherEarthGame
 {
     public class Game
     {
+        public event GameUpdatedEventHandler GameUpdated;
+
         private List<GameObject> gameObjects = new List<GameObject>();
         private int squareSide = 8;
         private List<Robot> robots = new List<Robot>();
@@ -28,6 +30,7 @@ namespace NetherEarthGame
             {
                 IRobotProgram program = r.Program;
                 program.Move(r);
+                GameUpdated(this);
             }
         }
 
@@ -39,7 +42,15 @@ namespace NetherEarthGame
 
         public void CreateRobot()
         {
-            robots.Add(new Robot(20, 16) { Program = new InitialProgram() });
+            Robot r = new Robot(20, 16) { Program = new InitialProgram(), Game = this };
+            robots.Add(r);
+        }
+
+        public void Start()
+        {
+            GameObjectFactory gameObjectFactory = new GameObjectFactory();
+            gameObjectFactory.CreateObject(gameObjects);
+            GameUpdated(this);
         }
     }
 }

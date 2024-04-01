@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetherEarthGame
 {
-    public interface IRobotProgram
+    internal interface IRobotProgram
     {
         void Move(Robot robot);
     }

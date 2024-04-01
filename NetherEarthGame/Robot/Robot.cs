@@ -9,6 +9,7 @@ namespace NetherEarthGame
     public class Robot : GameObject
     {
         private int helth = 100;
+        private Scaner scaner = new Scaner();
         private Gun gun;
         private Rocket rocket;
         private Phazor phazor;
@@ -23,7 +24,11 @@ namespace NetherEarthGame
             CreatePoints();
         }
 
-        public IRobotProgram Program { get; set; }
+        internal IRobotProgram Program { get; set; }
+
+        public Game Game { get; set; }
+
+        internal Scaner Scaner => scaner;
 
         private void CreatePoints()
         {

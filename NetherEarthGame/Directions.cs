@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetherEarthGame
 {
-    public enum Direction
+    internal enum Direction
     {
         NullDirection,
         RightDirection,
